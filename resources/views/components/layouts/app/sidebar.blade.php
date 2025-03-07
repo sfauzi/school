@@ -16,7 +16,7 @@
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                     <flux:navlist.item icon="home-modern" :href="route('classroom')" :current="request()->routeIs('classroom')" wire:navigate>{{ __('Manage Classroom') }}</flux:navlist.item>
                     <flux:navlist.item icon="academic-cap" :href="route('student')" :current="request()->routeIs('student')" wire:navigate>{{ __('Manage Student') }}</flux:navlist.item>
-                    <flux:navlist.item icon="trophy" :href="route('teacher')" :current="request()->routeIs('teacher')" wire:navigate>{{ __('Manage Teacher') }}</flux:navlist.item>
+                    <flux:navlist.item icon="users" :href="route('teacher')" :current="request()->routeIs('teacher')" wire:navigate>{{ __('Manage Teacher') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
@@ -28,16 +28,7 @@
             
             <flux:spacer />
 
-            <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
-                </flux:navlist.item>
-
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
-                {{ __('Documentation') }}
-                </flux:navlist.item>
-            </flux:navlist>
-
+            
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
                 <flux:profile

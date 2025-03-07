@@ -56,7 +56,7 @@
                             <flux:button variant="primary" wire:click="edit('{{ $student->id }}')" size="sm">
                                 Edit
                             </flux:button>
-                            <flux:button variant="danger" wire:click="delete('{{ $student->id }}')" size="sm">
+                            <flux:button wire:click="delete('{{ $student->id }}')" size="sm">
                                 Delete
                             </flux:button>
                         </td>

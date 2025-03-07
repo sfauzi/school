@@ -19,6 +19,10 @@ Route::view('student', 'student')
     ->middleware(['auth', 'verified'])
     ->name('student');
 
+Route::view('teacher', 'teacher')
+    ->middleware(['auth', 'verified'])
+    ->name('teacher');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 

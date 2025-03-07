@@ -14,13 +14,13 @@ class ListStudent extends Component
 
     public function mount()
     {
-        $this->students = Student::with('classroom')->get();
+        $this->students = Student::with('classroom')->orderBy('created_at', 'desc')->get();
     }
 
     #[On("reloadStudents")]
     public function reloadStudents()
     {
-        $this->students = Student::with('classroom')->get();
+        $this->students = Student::with('classroom')->orderBy('created_at', 'desc')->get();
     }
 
     public function edit($id)

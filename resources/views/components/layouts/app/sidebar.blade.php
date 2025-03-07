@@ -16,6 +16,7 @@
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                     <flux:navlist.item icon="home-modern" :href="route('classroom')" :current="request()->routeIs('classroom')" wire:navigate>{{ __('Manage Classroom') }}</flux:navlist.item>
                     <flux:navlist.item icon="academic-cap" :href="route('student')" :current="request()->routeIs('student')" wire:navigate>{{ __('Manage Student') }}</flux:navlist.item>
+                    <flux:navlist.item icon="trophy" :href="route('teacher')" :current="request()->routeIs('teacher')" wire:navigate>{{ __('Manage Teacher') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 

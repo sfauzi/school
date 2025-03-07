@@ -11,4 +11,10 @@ class Student extends Model
     use HasFactory, HasUuids;
 
     protected $fillable = ['name', 'class_id'];
+
+    // Relasi ke Classroom
+    public function classroom()
+    {
+        return $this->belongsTo(Classroom::class, 'class_id');
+    }
 }

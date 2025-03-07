@@ -15,19 +15,17 @@ class ListClassroom extends Component
     public function mount()
     {
         $this->classrooms  = Classroom::all();
-        // $this->tasks  = ModelTask::all();
     }
     public function render()
     {
         return view('livewire.classroom-resource.list-classroom');
     }
 
+
     #[On("reloadClassrooms")]
-    public function reloadTasks()
+    public function reloadClassrooms()
     {
         $this->classrooms  = Classroom::all();
-
-        // $this->tasks  = ModelTask::all();
     }
 
     public function edit($id)

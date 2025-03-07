@@ -17,7 +17,7 @@ class StudentEdit extends Component
     public $classes = [];
 
     #[On("editStudent")]
-    public function editClassroom($id)
+    public function editStudent($id)
     {
 
         $student = Student::find($id);
@@ -58,6 +58,7 @@ class StudentEdit extends Component
             ->show();
 
         $this->dispatch('reloadStudents');
+        $this->dispatch('editStudentSuccess');
     }
 
 

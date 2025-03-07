@@ -59,6 +59,7 @@ class TeacherEdit extends Component
             ->show();
 
         $this->dispatch('reloadTeachers');
+        $this->dispatch('editTeacherList');
     }
 
     public function render()

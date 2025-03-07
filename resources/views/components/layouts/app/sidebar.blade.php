@@ -23,6 +23,7 @@
             <flux:navlist.group expandable heading="Listings" class="hidden lg:grid">
                 <flux:navlist.item href="{{ route('listing.student-by-class') }}">Student by class</flux:navlist.item>
                 <flux:navlist.item href="{{ route('listing.teacher-by-class') }}">Teacher by class</flux:navlist.item>
+                <flux:navlist.item href="{{ route('listing.all') }}">All listings</flux:navlist.item>
             </flux:navlist.group>
             
             <flux:spacer />

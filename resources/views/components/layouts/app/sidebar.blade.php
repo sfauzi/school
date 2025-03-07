@@ -12,7 +12,7 @@
             </a>
 
             <flux:navlist variant="outline">
-                <flux:navlist.group :heading="__('Platform')" class="grid">
+                <flux:navlist.group :heading="__('Menu')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                     <flux:navlist.item icon="home-modern" :href="route('classroom')" :current="request()->routeIs('classroom')" wire:navigate>{{ __('Manage Classroom') }}</flux:navlist.item>
                     <flux:navlist.item icon="academic-cap" :href="route('student')" :current="request()->routeIs('student')" wire:navigate>{{ __('Manage Student') }}</flux:navlist.item>
@@ -22,6 +22,7 @@
 
             <flux:navlist.group expandable heading="Listings" class="hidden lg:grid">
                 <flux:navlist.item href="{{ route('listing.student-by-class') }}">Student by class</flux:navlist.item>
+                <flux:navlist.item href="{{ route('listing.teacher-by-class') }}">Teacher by class</flux:navlist.item>
             </flux:navlist.group>
             
             <flux:spacer />

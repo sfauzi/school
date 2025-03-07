@@ -27,6 +27,10 @@ Route::view('listing/student-by-class', 'listings.student-by-class')
     ->middleware(['auth', 'verified'])
     ->name('listing.student-by-class');
 
+Route::view('listing/teacher-by-class', 'listings.teacher-by-class')
+    ->middleware(['auth', 'verified'])
+    ->name('listing.teacher-by-class');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 

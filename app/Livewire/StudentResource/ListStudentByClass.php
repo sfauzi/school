@@ -15,7 +15,6 @@ class ListStudentByClass extends Component
 
     public function mount()
     {
-        // Ambil semua kelas untuk dropdown
         $this->classes = Classroom::orderBy('name', 'asc')->get();
 
         // Set default class_id ke kelas pertama jika ada

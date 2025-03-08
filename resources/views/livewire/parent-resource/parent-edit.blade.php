@@ -19,7 +19,7 @@
 
             <div class="flex">
                 <flux:spacer />
-                <flux:button type="submit" variant="primary" wire:click.prevent="store">Save</flux:button>
+                <flux:button type="submit" variant="primary" wire:click.prevent="update">Save</flux:button>
             </div>
         </div>
     </flux:modal>

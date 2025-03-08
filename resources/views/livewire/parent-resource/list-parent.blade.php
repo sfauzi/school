@@ -8,7 +8,7 @@
         </flux:modal.trigger>
 
         @livewire('parent-resource.parent-create')
-        @livewire('parent-resource.orang-tua-edit')
+        @livewire('parent-resource.parent-edit')
 
         <flux:modal name="delete-parent" class="min-w-[22rem]">
             <div class="space-y-6">

@@ -20,7 +20,7 @@ class ParentEdit extends Component
     public function editParent($id)
     {
 
-        $parent = Parent::find($id);
+        $parent = OrangTua::find($id);
 
         if (!$parent) {
             return;

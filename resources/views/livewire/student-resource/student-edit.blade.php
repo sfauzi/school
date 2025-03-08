@@ -2,7 +2,7 @@
     <flux:modal name="edit-student" class="w-full">
         <div class="space-y-6">
             <div>
-                <flux:heading size="lg">Create Student</flux:heading>
+                <flux:heading size="lg">Edit Student</flux:heading>
                 <flux:subheading>Enter student details.</flux:subheading>
             </div>
 

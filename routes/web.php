@@ -23,6 +23,10 @@ Route::view('teacher', 'teacher')
     ->middleware(['auth', 'verified'])
     ->name('teacher');
 
+Route::view('parent', 'parent')
+    ->middleware(['auth', 'verified'])
+    ->name('parent');
+
 Route::view('listing/student-by-class', 'listings.student-by-class')
     ->middleware(['auth', 'verified'])
     ->name('listing.student-by-class');

@@ -17,4 +17,9 @@ class Student extends Model
     {
         return $this->belongsTo(Classroom::class, 'class_id');
     }
+
+    public function parent()
+    {
+        return $this->hasOne(OrangTua::class, 'student_id');
+    }
 }

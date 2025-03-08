@@ -1,16 +1,16 @@
 <div>
     <div class="max-w-6xl mx-auto p-6 shadow-md rounded-lg">
         <div class="flex justify-between items-center mb-4">
-            <h2 class="text-lg font-semibold text-gray-700">List Student</h2>
+            <h2 class="text-lg font-semibold text-gray-700">List Parent</h2>
         </div>
-        <flux:modal.trigger name="create-student">
-            <flux:button variant="primary">Create Student</flux:button>
+        <flux:modal.trigger name="create-parent">
+            <flux:button variant="primary">Create Parent</flux:button>
         </flux:modal.trigger>
 
-        @livewire('student-resource.student-create')
-        @livewire('student-resource.student-edit')
+        @livewire('parent-resource.parent-create')
+        @livewire('parent-resource.orang-tua-edit')
 
-        <flux:modal name="delete-student" class="min-w-[22rem]">
+        <flux:modal name="delete-parent" class="min-w-[22rem]">
             <div class="space-y-6">
                 <div>
                     <flux:heading size="lg">Delete student?</flux:heading>
@@ -37,28 +37,24 @@
             <table class="w-full border border-gray-300 rounded-lg">
                 <thead>
                     <tr class="bg-gray-200 text-gray-700">
-                        <th class="py-2 px-4 border">Student Name</th>
-                        <th class="py-2 px-4 border">Class Name</th>
                         <th class="py-2 px-4 border">Parent Name</th>
+                        <th class="py-2 px-4 border">Student Name</th>
                         <th class="py-2 px-4 border">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($students as $student)
+                    @foreach ($parents as $parent)
                         <tr class=" hover:bg-gray-100 transition">
-                            <td class="py-2 px-4 border">{{ $student->name }}</td>
+                            <td class="py-2 px-4 border">{{ $parent->name }}</td>
                             <td class="py-2 px-4 border text-center">
-                                {{ $student->classroom ? $student->classroom->name : 'No Class' }}
+                                {{ $parent->student ? $parent->student->name : 'No Student' }}
                             </td>
                             <td class="py-2 px-4 border text-center">
-                                {{ $student->parent ? $student->parent->name : 'No Class' }}
-                            </td>
-                            <td class="py-2 px-4 border text-center">
-                                <flux:button variant="primary" wire:click="edit('{{ $student->id }}')" size="sm">
+                                <flux:button variant="primary" wire:click="edit('{{ $parent->id }}')" size="sm">
                                     Edit
                                 </flux:button>
 
-                                <flux:button wire:click="delete('{{ $student->id }}')" size="sm">
+                                <flux:button wire:click="delete('{{ $parent->id }}')" size="sm">
                                     Delete
                                 </flux:button>
                             </td>

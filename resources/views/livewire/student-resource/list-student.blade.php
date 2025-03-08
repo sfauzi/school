@@ -51,7 +51,7 @@
                                 {{ $student->classroom ? $student->classroom->name : 'No Class' }}
                             </td>
                             <td class="py-2 px-4 border text-center">
-                                {{ $student->parent ? $student->parent->name : 'No Class' }}
+                                {{ $student->parent ? $student->parent->name : 'No Parent' }}
                             </td>
                             <td class="py-2 px-4 border text-center">
                                 <flux:button variant="primary" wire:click="edit('{{ $student->id }}')" size="sm">
